@@ -1,5 +1,6 @@
 import NavBar from "./components/NavBar";
-import background from "./assets/background2.png";
+import Carousel from "react-bootstrap/Carousel";
+import background from "./assets/background1.png";
 import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.png";
 import email from "./assets/email.png";
@@ -36,7 +37,40 @@ function App() {
       <img className="downArrow" src={downArrow} />
 
       <div>
-        <h1>blablablbdalblbsald blasb dlab ldb albsd lasbl dba</h1>
+        <Carousel>
+          <Carousel.Item>
+            <img
+              style={{ flex: 1, width: "100%", height: "50%" }}
+              src={background}
+            />
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              style={{ flex: 1, width: "100%", height: "50%" }}
+              src={background}
+            />
+            <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              style={{ flex: 1, width: "100%", height: "50%" }}
+              src={background}
+            />
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
       </div>
     </div>
   );

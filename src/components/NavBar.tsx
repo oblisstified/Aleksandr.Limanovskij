@@ -5,7 +5,11 @@ import Navbar from "react-bootstrap/Navbar";
 function NavBar() {
   return (
     <>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar
+        bg="dark"
+        data-bs-theme="dark"
+        style={{ position: "fixed", top: 0 }}
+      >
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
