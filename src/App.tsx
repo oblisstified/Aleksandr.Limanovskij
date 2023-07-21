@@ -1,19 +1,27 @@
+// App.js
+import { useRef } from "react";
+import { Carousel } from "react-bootstrap";
 import NavBar from "./components/NavBar";
-import Carousel from "react-bootstrap/Carousel";
 import background from "./assets/background1.png";
 import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.png";
 import email from "./assets/email.png";
 import downArrow from "./assets/downArrow.png";
 import "./App.css";
-import React, { useState } from "react";
+
+function scrollDown() {
+  const element = document.getElementById("carouselSection");
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
 function App() {
   return (
     <div>
-      <div>
+      {/* <div>
         <NavBar />
-      </div>
+      </div> */}
 
       <div>
         <img
@@ -25,50 +33,60 @@ function App() {
       </div>
       <div className="websites">
         <a href="https://github.com/Oblisstified">
-          <img className="github" src={github} />
+          <img className="github" src={github} alt="GitHub" />
         </a>
         <a href="https://www.linkedin.com/in/aleksandr-limanovskij-0283b61a4/">
-          <img className="linkedin" src={linkedin} />
+          <img className="linkedin" src={linkedin} alt="LinkedIn" />
         </a>
         <a href="mailto:14alimanovskij@gmail.com">
-          <img className="email" src={email} />
+          <img className="email" src={email} alt="Email" />
         </a>
       </div>
-      <img className="downArrow" src={downArrow} />
-
+      <img
+        className="downArrow"
+        src={downArrow}
+        alt="Down Arrow"
+        onClick={scrollDown}
+      />
+      <div className="myProjectsHeader">
+        <h1>My Projects</h1>
+      </div>
       <div>
-        <Carousel>
+        <Carousel id="carouselSection">
           <Carousel.Item>
-            <img
-              style={{ flex: 1, width: "100%", height: "50%" }}
-              src={background}
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
+            <div className="white-box">
+              <div className="insideBox">
+                <h1>project1</h1>
+              </div>
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </p>
+              </Carousel.Caption>
+            </div>
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              style={{ flex: 1, width: "100%", height: "50%" }}
-              src={background}
-            />
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
+            <div className="white-box">
+              <div className="insideBox"></div>
+              <Carousel.Caption>
+                <h3>Secopnd slide label</h3>
+                <p>
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </p>
+              </Carousel.Caption>
+            </div>
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              style={{ flex: 1, width: "100%", height: "50%" }}
-              src={background}
-            />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
+            <div className="white-box">
+              <div className="insideBox"></div>
+              <Carousel.Caption>
+                <h3>Third slide label</h3>
+                <p>
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </p>
+              </Carousel.Caption>
+            </div>
           </Carousel.Item>
         </Carousel>
       </div>

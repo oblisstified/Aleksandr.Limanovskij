@@ -40,6 +40,12 @@
   filter: invert(100%);
   -webkit-filter: invert(100%);
 }
+.github:hover,
+.linkedin:hover,
+.email:hover {
+  filter: invert(0%);
+}
+
 .downArrow {
   height: 60px;
   width: 60px;
@@ -58,9 +64,57 @@
   width: 60px;
   position: "absolute";
 }
+.downArrow:hover {
+  cursor: pointer;
+}
+.myProjects {
+  text-align: center;
+  position: absolute;
+  top: 0%;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: max-content;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 
-.github:hover,
-.linkedin:hover,
-.email:hover {
-  filter: invert(0%);
+  position: "absolute";
+}
+
+.carousel-item {
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-box {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(22, 19, 19);
+}
+
+.insideBox {
+  width: 70%;
+  height: 70%;
+  background-color: white;
+
+  left: 50%;
+  top: 45%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.myProjectsHeader {
+  flex: 0.2;
+  background-color: rgb(22, 19, 19);
+  border-bottom: 1px solid #eee;
+  justify-content: center;
+  display: flex;
+}
+.myProjectsHeader h1 {
+  color: white;
+  font-family: "Lumanosimo", cursive;
 }
