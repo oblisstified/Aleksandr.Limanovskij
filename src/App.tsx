@@ -7,6 +7,12 @@ import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.png";
 import email from "./assets/email.png";
 import downArrow from "./assets/downArrow.png";
+import backgroundBox from "./assets/boxBackgound.png";
+import appetizerHome from "./assets/appetizeHomeScreen.png";
+import minesweeper from "./assets/minesweeperPosition3.png";
+
+import { Box } from "@mui/material";
+
 import "./App.css";
 
 function scrollDown() {
@@ -56,32 +62,21 @@ function App() {
           <Carousel.Item>
             <div className="white-box">
               <div className="insideBox">
-                <h1>project1</h1>
+                <div className="box">
+                  <div></div>
+                  <text className="myProjectsName">Meal time asdas das d</text>
+                </div>
+                <div className="box">
+                  <div></div>
+                </div>{" "}
+                <div className="box">
+                  <div></div>
+                </div>{" "}
+                {/* <Box className = "hex"> </Box> */}
               </div>
+
               <Carousel.Caption>
                 <h3>First slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="white-box">
-              <div className="insideBox"></div>
-              <Carousel.Caption>
-                <h3>Secopnd slide label</h3>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </Carousel.Caption>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="white-box">
-              <div className="insideBox"></div>
-              <Carousel.Caption>
-                <h3>Third slide label</h3>
                 <p>
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
