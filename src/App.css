@@ -60,9 +60,6 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  height: 60px;
-  width: 60px;
-  position: "absolute";
 }
 .downArrow:hover {
   cursor: pointer;
@@ -80,8 +77,11 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-
   position: "absolute";
+}
+.myProjectsName {
+  color: black;
+  cursor: pointer;
 }
 
 .carousel-item {
@@ -124,12 +124,24 @@
   margin: 60px;
   border: black 1px solid;
   border-radius: 2%;
-  background-color: rgb(52, 3, 99);
+}
+.box-purple div {
+  background-color: rgb(91, 51, 129);
+  border-bottom: 265px solid black;
+}
+
+.box-red div {
+  background-color: rgb(129, 51, 51);
+  border-bottom: 265px solid black;
+}
+
+.box-blue div {
+  background-color: rgb(51, 82, 129);
   border-bottom: 265px solid black;
 }
 .box text {
-  font-size: 50px;
-  color: #eee;
+  font-size: 45px;
+  color: black;
   text-align: center;
   position: absolute;
   top: 0;
@@ -166,17 +178,70 @@
   transform: translate(20%, 20%);
 }
 
-.hex {
-  width: 200px;
-  color: aqua;
-  background-color: azure;
-  aspect-ratio: 1;
-  clip-path: polygon(
-    93.3% 75%,
-    50% 100%,
-    6.7% 75%,
-    6.7% 25%,
-    50% 0%,
-    93.3% 25%
-  );
+.diamond {
+  height: 500px;
+  width: 250px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: max-content;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  resize: "stretch";
+  transform: rotate(30deg);
+  cursor: pointer;
+}
+.diamond:hover {
+}
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.boxas {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+}
+
+.close-icon {
+  content: "x";
+  cursor: pointer;
+  position: fixed;
+  right: calc(15% - 30px);
+  top: calc(100vh - 85vh - 33px);
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}
+
+.changeSize {
+  transition: transform 0.5s ease;
+}
+
+.hovered {
+  transform: scale(0.6);
 }

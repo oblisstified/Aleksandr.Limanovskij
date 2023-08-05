@@ -1,5 +1,5 @@
 // App.js
-import { useRef } from "react";
+import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import NavBar from "./components/NavBar";
 import background from "./assets/background1.png";
@@ -10,10 +10,13 @@ import downArrow from "./assets/downArrow.png";
 import backgroundBox from "./assets/boxBackgound.png";
 import appetizerHome from "./assets/appetizeHomeScreen.png";
 import minesweeper from "./assets/minesweeperPosition3.png";
+import hexagon from "./assets/hexagon.png";
+import gradient from "./assets/gradiant.png";
 
 import { Box } from "@mui/material";
 
 import "./App.css";
+import Popup from "./components/popUp";
 
 function scrollDown() {
   const element = document.getElementById("carouselSection");
@@ -23,6 +26,21 @@ function scrollDown() {
 }
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const diamond = document.querySelector(".diamond");
+  const myProjectsName = document.querySelector(".myProjectsName");
+
+  function toggleHover() {
+    if (diamond && myProjectsName) {
+      diamond.classList.toggle("hovered");
+      myProjectsName.classList.toggle("hovered");
+    }
+  }
   return (
     <div>
       {/* <div>
@@ -60,18 +78,76 @@ function App() {
       <div>
         <Carousel id="carouselSection">
           <Carousel.Item>
+            {" "}
             <div className="white-box">
               <div className="insideBox">
-                <div className="box">
-                  <div></div>
-                  <text className="myProjectsName">Meal time asdas das d</text>
+                <div>
+                  {isOpen && (
+                    <Popup
+                      content={
+                        <>
+                          <b>Calorie intake mobile app</b>
+                          <p>
+                            This mobile app bla bla blabl asd a hsuidhai
+                            ushgdiuahs uidhasui dhiuash diuahsui dhausih diu
+                          </p>
+                        </>
+                      }
+                      handleClose={togglePopup}
+                    />
+                  )}
+                  <div className="box box-purple">
+                    <div>
+                      <img
+                        className="diamond changeSize"
+                        src={hexagon}
+                        alt="Diamond"
+                        onMouseEnter={toggleHover}
+                        onMouseLeave={toggleHover}
+                        onClick={togglePopup}
+                      />
+                    </div>
+                    <text
+                      className="myProjectsName changeSize"
+                      onMouseEnter={toggleHover}
+                      onMouseLeave={toggleHover}
+                      onClick={togglePopup}
+                    >
+                      Meal Time
+                    </text>
+                  </div>
                 </div>
-                <div className="box">
-                  <div></div>
-                </div>{" "}
-                <div className="box">
-                  <div></div>
-                </div>{" "}
+
+                <div className="box box-red">
+                  <div>
+                    <img
+                      className="diamond changeSize dia"
+                      src={hexagon}
+                      alt="Diamond"
+                      onMouseEnter={toggleHover}
+                      onMouseLeave={toggleHover}
+                      onClick={togglePopup}
+                    />
+                  </div>
+                  <text
+                    className="myProjectsName changeSize"
+                    onMouseEnter={toggleHover}
+                    onMouseLeave={toggleHover}
+                    onClick={togglePopup}
+                  >
+                    Chess AI
+                  </text>
+                </div>
+
+                <div className="box box-blue">
+                  <div>
+                    <img className="diamond" src={hexagon} alt="Diamond" />
+                  </div>
+                  <text className="myProjectsName" style={{ fontSize: 35 }}>
+                    Minesweeper
+                  </text>
+                </div>
+
                 {/* <Box className = "hex"> </Box> */}
               </div>
 
