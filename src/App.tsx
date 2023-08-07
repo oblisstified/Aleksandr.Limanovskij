@@ -27,20 +27,22 @@ function scrollDown() {
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [popUpPosition, setPopUpPosition] = useState("false");
+  const [isHovered, setIsHovered] = useState("false");
 
-  const togglePopup = () => {
+  const togglePopup = (popUpPosition: string) => {
     setIsOpen(!isOpen);
+    setPopUpPosition(popUpPosition);
   };
 
-  const diamond = document.querySelector(".diamond");
-  const myProjectsName = document.querySelector(".myProjectsName");
+  const handleMouseEnter = (projectPosition: string) => {
+    setIsHovered(projectPosition);
+  };
 
-  function toggleHover() {
-    if (diamond && myProjectsName) {
-      diamond.classList.toggle("hovered");
-      myProjectsName.classList.toggle("hovered");
-    }
-  }
+  const handleMouseLeave = () => {
+    setIsHovered("");
+  };
+
   return (
     <div>
       {/* <div>
@@ -82,69 +84,171 @@ function App() {
             <div className="white-box">
               <div className="insideBox">
                 <div>
-                  {isOpen && (
+                  {isOpen && popUpPosition == "1" && (
                     <Popup
                       content={
                         <>
                           <b>Calorie intake mobile app</b>
                           <p>
-                            This mobile app bla bla blabl asd a hsuidhai
-                            ushgdiuahs uidhasui dhiuash diuahsui dhausih diu
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Sed ac odio sit amet sem malesuada accumsan.
+                            Proin pharetra, odio ut bibendum ullamcorper, orci
+                            dui vehicula urna, ut elementum urna dui a elit. In
+                            finibus massa quis mauris semper, ut facilisis nunc
+                            tincidunt. Phasellus eu tincidunt libero. Fusce at
+                            nisi scelerisque, tristique mi vel, posuere quam.
+                            Nulla egestas est eget ipsum dictum, nec tristique
+                            sapien venenatis. Quisque at ex scelerisque,
+                            fermentum mi ut, varius elit. Pellentesque venenatis
+                            eu mi a feugiat. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia
+                            curae; Integer nec bibendum nunc. Aenean sagittis
+                            suscipit libero, quis volutpat nisi vehicula at.
+                            Donec non congue ligula. Nulla eu enim eget nunc
+                            hendrerit vehicula eget id eros. Curabitur vel
+                            interdum libero. Etiam cursus diam a massa pharetra,
+                            eu hendrerit urna efficitur. Nulla facilisi. Fusce
+                            auctor viverra lectus a dapibus. Maecenas facilisis
+                            quam ac elit blandit, quis aliquam magna ultricies.
                           </p>
                         </>
                       }
-                      handleClose={togglePopup}
+                      handleClose={() => togglePopup("1")}
                     />
                   )}
                   <div className="box box-purple">
                     <div>
                       <img
-                        className="diamond changeSize"
+                        className={`diamond changeSize ${
+                          isHovered == "1" ? "hovered" : ""
+                        }`}
                         src={hexagon}
-                        alt="Diamond"
-                        onMouseEnter={toggleHover}
-                        onMouseLeave={toggleHover}
-                        onClick={togglePopup}
+                        onMouseEnter={() => handleMouseEnter("1")}
+                        onMouseLeave={() => handleMouseLeave()}
+                        onClick={() => togglePopup("1")}
                       />
                     </div>
                     <text
-                      className="myProjectsName changeSize"
-                      onMouseEnter={toggleHover}
-                      onMouseLeave={toggleHover}
-                      onClick={togglePopup}
+                      className={`myProjectsName changeSize ${
+                        isHovered == "1" ? "hovered" : ""
+                      }`}
+                      onMouseEnter={() => handleMouseEnter("1")}
+                      onMouseLeave={() => handleMouseLeave()}
+                      onClick={() => togglePopup("1")}
                     >
                       Meal Time
                     </text>
                   </div>
                 </div>
-
+                {isOpen && popUpPosition == "2" && (
+                  <Popup
+                    content={
+                      <>
+                        <b>Chess AI</b>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Sed ac odio sit amet sem malesuada accumsan.
+                          Proin pharetra, odio ut bibendum ullamcorper, orci dui
+                          vehicula urna, ut elementum urna dui a elit. In
+                          finibus massa quis mauris semper, ut facilisis nunc
+                          tincidunt. Phasellus eu tincidunt libero. Fusce at
+                          nisi scelerisque, tristique mi vel, posuere quam.
+                          Nulla egestas est eget ipsum dictum, nec tristique
+                          sapien venenatis. Quisque at ex scelerisque, fermentum
+                          mi ut, varius elit. Pellentesque venenatis eu mi a
+                          feugiat. Vestibulum ante ipsum primis in faucibus orci
+                          luctus et ultrices posuere cubilia curae; Integer nec
+                          bibendum nunc. Aenean sagittis suscipit libero, quis
+                          volutpat nisi vehicula at. Donec non congue ligula.
+                          Nulla eu enim eget nunc hendrerit vehicula eget id
+                          eros. Curabitur vel interdum libero. Etiam cursus diam
+                          a massa pharetra, eu hendrerit urna efficitur. Nulla
+                          facilisi. Fusce auctor viverra lectus a dapibus.
+                          Maecenas facilisis quam ac elit blandit, quis aliquam
+                          magna ultricies.
+                        </p>
+                      </>
+                    }
+                    handleClose={() => togglePopup("2")}
+                  />
+                )}
                 <div className="box box-red">
                   <div>
                     <img
-                      className="diamond changeSize dia"
+                      className={`diamond changeSize ${
+                        isHovered == "2" ? "hovered" : ""
+                      }`}
                       src={hexagon}
-                      alt="Diamond"
-                      onMouseEnter={toggleHover}
-                      onMouseLeave={toggleHover}
-                      onClick={togglePopup}
+                      onMouseEnter={() => handleMouseEnter("2")}
+                      onMouseLeave={() => handleMouseLeave()}
+                      onClick={() => togglePopup("2")}
                     />
                   </div>
+
                   <text
-                    className="myProjectsName changeSize"
-                    onMouseEnter={toggleHover}
-                    onMouseLeave={toggleHover}
-                    onClick={togglePopup}
+                    className={`myProjectsName changeSize ${
+                      isHovered == "2" ? "hovered" : ""
+                    }`}
+                    onMouseEnter={() => handleMouseEnter("2")}
+                    onMouseLeave={() => handleMouseLeave()}
+                    onClick={() => togglePopup("2")}
                   >
                     Chess AI
                   </text>
                 </div>
-
+                {isOpen && popUpPosition == "3" && (
+                  <Popup
+                    content={
+                      <>
+                        <b>MineSweeper</b>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Sed ac odio sit amet sem malesuada accumsan.
+                          Proin pharetra, odio ut bibendum ullamcorper, orci dui
+                          vehicula urna, ut elementum urna dui a elit. In
+                          finibus massa quis mauris semper, ut facilisis nunc
+                          tincidunt. Phasellus eu tincidunt libero. Fusce at
+                          nisi scelerisque, tristique mi vel, posuere quam.
+                          Nulla egestas est eget ipsum dictum, nec tristique
+                          sapien venenatis. Quisque at ex scelerisque, fermentum
+                          mi ut, varius elit. Pellentesque venenatis eu mi a
+                          feugiat. Vestibulum ante ipsum primis in faucibus orci
+                          luctus et ultrices posuere cubilia curae; Integer nec
+                          bibendum nunc. Aenean sagittis suscipit libero, quis
+                          volutpat nisi vehicula at. Donec non congue ligula.
+                          Nulla eu enim eget nunc hendrerit vehicula eget id
+                          eros. Curabitur vel interdum libero. Etiam cursus diam
+                          a massa pharetra, eu hendrerit urna efficitur. Nulla
+                          facilisi. Fusce auctor viverra lectus a dapibus.
+                          Maecenas facilisis quam ac elit blandit, quis aliquam
+                          magna ultricies.
+                        </p>
+                      </>
+                    }
+                    handleClose={() => togglePopup("3")}
+                  />
+                )}
                 <div className="box box-blue">
                   <div>
-                    <img className="diamond" src={hexagon} alt="Diamond" />
+                    <img
+                      className={`diamond changeSize ${
+                        isHovered == "3" ? "hovered" : ""
+                      }`}
+                      src={hexagon}
+                      onMouseEnter={() => handleMouseEnter("3")}
+                      onMouseLeave={() => handleMouseLeave()}
+                      onClick={() => togglePopup("3")}
+                    />
                   </div>
-                  <text className="myProjectsName" style={{ fontSize: 35 }}>
-                    Minesweeper
+                  <text
+                    className={`myProjectsName changeSize ${
+                      isHovered == "3" ? "hovered" : ""
+                    }`}
+                    onMouseEnter={() => handleMouseEnter("3")}
+                    onMouseLeave={() => handleMouseLeave()}
+                    onClick={() => togglePopup("3")}
+                  >
+                    Mines
                   </text>
                 </div>
 
