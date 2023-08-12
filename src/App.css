@@ -139,6 +139,11 @@
   background-color: rgb(51, 82, 129);
   border-bottom: 265px solid black;
 }
+.box-green div {
+  background-color: rgb(51, 129, 64);
+  border-bottom: 265px solid black;
+}
+
 .box text {
   font-size: 45px;
   color: black;
@@ -195,8 +200,6 @@
   transform: rotate(30deg);
   cursor: pointer;
 }
-.diamond:hover {
-}
 
 .popup-box {
   position: fixed;
@@ -213,8 +216,8 @@
   width: 70%;
   margin: 0 auto;
   height: auto;
-  max-height: 70vh;
-  margin-top: calc(100vh - 85vh - 20px);
+  max-height: 7 0vh;
+  margin-top: calc(100vh - 97vh - 20px);
   background: #fff;
   border-radius: 4px;
   padding: 20px;
@@ -227,7 +230,7 @@
   cursor: pointer;
   position: fixed;
   right: calc(15% - 30px);
-  top: calc(100vh - 85vh - 33px);
+  top: calc(100vh - 97vh - 33px);
   background: #ededed;
   width: 25px;
   height: 25px;

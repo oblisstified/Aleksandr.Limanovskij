@@ -2,18 +2,23 @@
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import NavBar from "./components/NavBar";
+
 import background from "./assets/background1.png";
 import linkedin from "./assets/linkedin.png";
 import github from "./assets/github.png";
 import email from "./assets/email.png";
 import downArrow from "./assets/downArrow.png";
-import backgroundBox from "./assets/boxBackgound.png";
-import appetizerHome from "./assets/appetizeHomeScreen.png";
-import minesweeper from "./assets/minesweeperPosition3.png";
 import hexagon from "./assets/hexagon.png";
-import gradient from "./assets/gradiant.png";
 
-import { Box } from "@mui/material";
+import mealTimeVideo from "./assets/MealtimeVideo.mp4";
+import minesweeperVideo from "./assets/MineSweeperVideo.mp4";
+import chessVideo from "./assets/ChessVideo.mp4";
+import NNAdditionVideo from "./assets/NNVideo.mp4";
+
+import MealTimeInfo from "./text/ProjectInfo/MealTime.json";
+import ChessAIInfo from "./text/ProjectInfo/ChessAI.json";
+import MineSweeperInfo from "./text/ProjectInfo/MineSweeper.json";
+import NNAddition from "./text/ProjectInfo/NNAddition.json";
 
 import "./App.css";
 import Popup from "./components/popUp";
@@ -88,32 +93,12 @@ function App() {
                     <Popup
                       content={
                         <>
-                          <b>Calorie intake mobile app</b>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed ac odio sit amet sem malesuada accumsan.
-                            Proin pharetra, odio ut bibendum ullamcorper, orci
-                            dui vehicula urna, ut elementum urna dui a elit. In
-                            finibus massa quis mauris semper, ut facilisis nunc
-                            tincidunt. Phasellus eu tincidunt libero. Fusce at
-                            nisi scelerisque, tristique mi vel, posuere quam.
-                            Nulla egestas est eget ipsum dictum, nec tristique
-                            sapien venenatis. Quisque at ex scelerisque,
-                            fermentum mi ut, varius elit. Pellentesque venenatis
-                            eu mi a feugiat. Vestibulum ante ipsum primis in
-                            faucibus orci luctus et ultrices posuere cubilia
-                            curae; Integer nec bibendum nunc. Aenean sagittis
-                            suscipit libero, quis volutpat nisi vehicula at.
-                            Donec non congue ligula. Nulla eu enim eget nunc
-                            hendrerit vehicula eget id eros. Curabitur vel
-                            interdum libero. Etiam cursus diam a massa pharetra,
-                            eu hendrerit urna efficitur. Nulla facilisi. Fusce
-                            auctor viverra lectus a dapibus. Maecenas facilisis
-                            quam ac elit blandit, quis aliquam magna ultricies.
-                          </p>
+                          <b>{MealTimeInfo.title}</b>
+                          <p>{MealTimeInfo.description}</p>
                         </>
                       }
                       handleClose={() => togglePopup("1")}
+                      video={mealTimeVideo}
                     />
                   )}
                   <div className="box box-purple">
@@ -144,32 +129,12 @@ function App() {
                   <Popup
                     content={
                       <>
-                        <b>Chess AI</b>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Sed ac odio sit amet sem malesuada accumsan.
-                          Proin pharetra, odio ut bibendum ullamcorper, orci dui
-                          vehicula urna, ut elementum urna dui a elit. In
-                          finibus massa quis mauris semper, ut facilisis nunc
-                          tincidunt. Phasellus eu tincidunt libero. Fusce at
-                          nisi scelerisque, tristique mi vel, posuere quam.
-                          Nulla egestas est eget ipsum dictum, nec tristique
-                          sapien venenatis. Quisque at ex scelerisque, fermentum
-                          mi ut, varius elit. Pellentesque venenatis eu mi a
-                          feugiat. Vestibulum ante ipsum primis in faucibus orci
-                          luctus et ultrices posuere cubilia curae; Integer nec
-                          bibendum nunc. Aenean sagittis suscipit libero, quis
-                          volutpat nisi vehicula at. Donec non congue ligula.
-                          Nulla eu enim eget nunc hendrerit vehicula eget id
-                          eros. Curabitur vel interdum libero. Etiam cursus diam
-                          a massa pharetra, eu hendrerit urna efficitur. Nulla
-                          facilisi. Fusce auctor viverra lectus a dapibus.
-                          Maecenas facilisis quam ac elit blandit, quis aliquam
-                          magna ultricies.
-                        </p>
+                        <b>{ChessAIInfo.title}</b>
+                        <p>{ChessAIInfo.description}</p>
                       </>
                     }
                     handleClose={() => togglePopup("2")}
+                    video={chessVideo}
                   />
                 )}
                 <div className="box box-red">
@@ -200,32 +165,12 @@ function App() {
                   <Popup
                     content={
                       <>
-                        <b>MineSweeper</b>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Sed ac odio sit amet sem malesuada accumsan.
-                          Proin pharetra, odio ut bibendum ullamcorper, orci dui
-                          vehicula urna, ut elementum urna dui a elit. In
-                          finibus massa quis mauris semper, ut facilisis nunc
-                          tincidunt. Phasellus eu tincidunt libero. Fusce at
-                          nisi scelerisque, tristique mi vel, posuere quam.
-                          Nulla egestas est eget ipsum dictum, nec tristique
-                          sapien venenatis. Quisque at ex scelerisque, fermentum
-                          mi ut, varius elit. Pellentesque venenatis eu mi a
-                          feugiat. Vestibulum ante ipsum primis in faucibus orci
-                          luctus et ultrices posuere cubilia curae; Integer nec
-                          bibendum nunc. Aenean sagittis suscipit libero, quis
-                          volutpat nisi vehicula at. Donec non congue ligula.
-                          Nulla eu enim eget nunc hendrerit vehicula eget id
-                          eros. Curabitur vel interdum libero. Etiam cursus diam
-                          a massa pharetra, eu hendrerit urna efficitur. Nulla
-                          facilisi. Fusce auctor viverra lectus a dapibus.
-                          Maecenas facilisis quam ac elit blandit, quis aliquam
-                          magna ultricies.
-                        </p>
+                        <b>{MineSweeperInfo.title}</b>
+                        <p>{MineSweeperInfo.description}</p>
                       </>
                     }
                     handleClose={() => togglePopup("3")}
+                    video={minesweeperVideo}
                   />
                 )}
                 <div className="box box-blue">
@@ -256,11 +201,53 @@ function App() {
               </div>
 
               <Carousel.Caption>
-                <h3>First slide label</h3>
                 <p>
                   Nulla vitae elit libero, a pharetra augue mollis interdum.
                 </p>
               </Carousel.Caption>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="white-box">
+              <div className="insideBox">
+                <div>
+                  {isOpen && popUpPosition == "4" && (
+                    <Popup
+                      content={
+                        <>
+                          <b>{NNAddition.title}</b>
+                          <p>{NNAddition.description}</p>
+                        </>
+                      }
+                      handleClose={() => togglePopup("4")}
+                      video={NNAdditionVideo}
+                    />
+                  )}
+                  <div className="box box-green">
+                    <div>
+                      <img
+                        className={`diamond changeSize ${
+                          isHovered == "4" ? "hovered" : ""
+                        }`}
+                        src={hexagon}
+                        onMouseEnter={() => handleMouseEnter("4")}
+                        onMouseLeave={() => handleMouseLeave()}
+                        onClick={() => togglePopup("4")}
+                      />
+                    </div>
+                    <text
+                      className={`myProjectsName changeSize ${
+                        isHovered == "4" ? "hovered" : ""
+                      }`}
+                      onMouseEnter={() => handleMouseEnter("4")}
+                      onMouseLeave={() => handleMouseLeave()}
+                      onClick={() => togglePopup("4")}
+                    >
+                      Addition
+                    </text>
+                  </div>
+                </div>
+              </div>
             </div>
           </Carousel.Item>
         </Carousel>

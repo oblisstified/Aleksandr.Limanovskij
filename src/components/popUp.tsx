@@ -3,6 +3,7 @@ import { MouseEventHandler } from "react";
 interface PopUpProp {
   handleClose: MouseEventHandler<HTMLSpanElement>;
   content: React.ReactNode;
+  video: string;
 }
 
 function Popup(props: PopUpProp) {
@@ -13,6 +14,7 @@ function Popup(props: PopUpProp) {
           x
         </span>
         {props.content}
+        <video src={props.video} width="800" height="400" controls />
       </div>
     </div>
   );
