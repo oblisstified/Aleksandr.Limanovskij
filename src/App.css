@@ -110,6 +110,9 @@
   transform: translate(-50%, -50%);
   flex-wrap: wrap;
 }
+.centeringEverything {
+  display: flex;
+}
 .box {
   flex-basis: 75;
   border: "black" 1;
@@ -140,7 +143,15 @@
   border-bottom: 265px solid black;
 }
 .box-green div {
-  background-color: rgb(51, 129, 64);
+  background-color: rgb(60, 129, 51);
+  border-bottom: 265px solid black;
+}
+.box-pink div {
+  background-color: rgb(129, 51, 116);
+  border-bottom: 265px solid black;
+}
+.box-orange div {
+  background-color: rgb(129, 108, 51);
   border-bottom: 265px solid black;
 }
 
