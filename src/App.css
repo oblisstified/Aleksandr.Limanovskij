@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 
 .nameHeader {
-  border: "2px solid white";
+  border: 2px solid white;
 }
 
 .header {
@@ -258,4 +258,77 @@
 
 .hovered {
   transform: scale(0.6);
+}
+.dependency {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.dependency:hover {
+  transform: translateY(-3px);
+  border-color: #555;
+  cursor: default;
+}
+
+.dependency .text {
+  font-family: "Futura", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.about-section {
+  padding: 100px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content {
+  flex: 1;
+  padding-right: 40px;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
 }

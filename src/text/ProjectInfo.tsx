@@ -10,6 +10,7 @@ export interface Project {
   video: string;
   colorClass: string;
   dependencies: string[];
+  time: string;
 }
 
 const projects: Project[] = [
@@ -21,6 +22,7 @@ const projects: Project[] = [
     video: mealTimeVideo,
     colorClass: "box-purple",
     dependencies: ["React Native", "Javascript", "FireBase"],
+    time: " March 2023",
   },
   {
     id: "2",
@@ -29,6 +31,7 @@ const projects: Project[] = [
     video: chessVideo,
     colorClass: "box-red",
     dependencies: ["PyGame", " Python"],
+    time: " June 2021",
   },
   {
     id: "3",
@@ -37,6 +40,7 @@ const projects: Project[] = [
     video: minesweeperVideo,
     colorClass: "box-blue",
     dependencies: ["PyGame", " Python"],
+    time: " August 2021",
   },
   {
     id: "4",
@@ -45,6 +49,7 @@ const projects: Project[] = [
     video: NNAdditionVideo,
     colorClass: "box-green",
     dependencies: ["Python"],
+    time: " May 2023",
   },
   {
     id: "5",
@@ -52,7 +57,8 @@ const projects: Project[] = [
     description: "This is reserved...",
     video: "",
     colorClass: "box-pink",
-    dependencies: ["React Native"],
+    dependencies: [""],
+    time: "",
   },
   {
     id: "6",
@@ -60,7 +66,8 @@ const projects: Project[] = [
     description: "This is reserved...",
     video: "",
     colorClass: "box-orange",
-    dependencies: ["React Native"],
+    dependencies: [""],
+    time: "",
   },
 ];
 

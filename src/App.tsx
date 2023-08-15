@@ -10,10 +10,6 @@ import email from "./assets/email.png";
 import downArrow from "./assets/downArrow.png";
 import hexagon from "./assets/hexagon.png";
 
-import MealTimeInfo from "./text/ProjectInfo/MealTime.json";
-import ChessAIInfo from "./text/ProjectInfo/ChessAI.json";
-import MineSweeperInfo from "./text/ProjectInfo/MineSweeper.json";
-import NNAddition from "./text/ProjectInfo/NNAddition.json";
 import projects, { Project } from "./text/ProjectInfo";
 import "./App.css";
 import Popup from "./components/popUp";
@@ -37,6 +33,7 @@ function App() {
             handleClose={() => togglePopup(project.id)}
             video={project.video}
             dependencies={project.dependencies}
+            time={project.time}
           />
         )}
         <div className={`box ${project.colorClass}`}>
@@ -117,11 +114,61 @@ function App() {
         alt="Down Arrow"
         onClick={scrollDown}
       />
+      <section id="about" className="about-section">
+        <div className="about-container">
+          <div className="about-content">
+            <h2>About Me</h2>
+            <p>
+              Hello, I'm{" "}
+              <span className="highlight">Aleksandr Limanovskij</span>, a{" "}
+              <span className="highlight">dedicated developer</span> and{" "}
+              <span className="highlight">creative problem solver</span> based
+              in <span className="highlight">[Your Location]</span>. With a
+              solid foundation in{" "}
+              <span className="highlight">[Your Skills]</span>, I am committed
+              to crafting <span className="highlight">efficient</span> and{" "}
+              <span className="highlight">refined solutions</span> that{" "}
+              <span className="highlight">
+                [Your Goal or Value Proposition]
+              </span>
+              .
+            </p>
+            <p>
+              My journey into programming began{" "}
+              <span className="highlight">[Your Starting Point]</span>, and ever
+              since, I've embarked on a{" "}
+              <span className="highlight">continuous learning expedition</span>{" "}
+              to stay at the forefront of the latest{" "}
+              <span className="highlight">technologies</span> and{" "}
+              <span className="highlight">practices</span> in{" "}
+              <span className="highlight">[Your Field or Industry]</span>.
+            </p>
+            <p>
+              Beyond coding, you can find me{" "}
+              <span className="highlight">[Your Hobbies or Interests]</span>,
+              and I'm consistently{" "}
+              <span className="highlight">invigorated by</span> [Your Vision or
+              Future Goals]. I strongly believe in the power of{" "}
+              <span className="highlight">collaborative efforts</span> and{" "}
+              <span className="highlight">transparent communication</span> to
+              foster <span className="highlight">innovation</span> and transform{" "}
+              <span className="highlight">ideas into reality</span>.
+            </p>
+            <a href="#contact" className="cta-button">
+              Let's Connect
+            </a>
+          </div>
+          <div className="about-image">
+            <img src="your-profile-image.jpg" alt="Aleksandr Limanovskij" />
+          </div>
+        </div>
+      </section>
+
       <div className="myProjectsHeader">
         <h1>My Projects</h1>
       </div>
       <div>
-        <Carousel id="carouselSection">
+        <Carousel fade interval={null} id="carouselSection">
           <Carousel.Item>
             <div className="white-box">
               <div className="insideBox">

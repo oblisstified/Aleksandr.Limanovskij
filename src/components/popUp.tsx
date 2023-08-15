@@ -6,6 +6,7 @@ interface PopUpProp {
   content: React.ReactNode;
   video: string;
   dependencies: string[];
+  time: string;
 }
 
 function Popup(props: PopUpProp) {
@@ -16,6 +17,9 @@ function Popup(props: PopUpProp) {
           x
         </span>
         {props.content}
+
+        <text>{props.time}</text>
+
         <video
           src={props.video}
           style={{ margin: 20 }}
@@ -25,13 +29,15 @@ function Popup(props: PopUpProp) {
         />
         <div
           style={{
-            flexDirection: "row", // Arrange items horizontally
-            justifyContent: "space-between", // Distribute items along the main axis with equal space
-            alignItems: "center", // Alig
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
           {props.dependencies.map((dependency) => (
-            <text>{dependency}</text>
+            <div className="dependency">
+              <text>{dependency}</text>
+            </div>
           ))}
         </div>
       </div>
