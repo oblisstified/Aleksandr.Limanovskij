@@ -1,6 +1,9 @@
 // App.js
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
+import { Document, Page, pdfjs } from "react-pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
 import NavBar from "./components/NavBar";
 
 import background from "./assets/background1.png";
@@ -10,9 +13,11 @@ import email from "./assets/email.png";
 import downArrow from "./assets/downArrow.png";
 import hexagon from "./assets/hexagon.png";
 
+import resume from "./assets/resume.pdf";
 import projects, { Project } from "./text/ProjectInfo";
 import "./App.css";
 import Popup from "./components/popUp";
+import chessPoster from "./assets/chessPoster.jpg";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +41,7 @@ function App() {
             time={project.time}
           />
         )}
-        <div className={`box ${project.colorClass}`}>
+        <div className={`box `}>
           <div>
             <img
               className={`diamond changeSize ${
@@ -119,50 +124,66 @@ function App() {
           <div className="about-content">
             <h2>About Me</h2>
             <p>
-              Hello, I'm{" "}
-              <span className="highlight">Aleksandr Limanovskij</span>, a{" "}
-              <span className="highlight">dedicated developer</span> and{" "}
-              <span className="highlight">creative problem solver</span> based
-              in <span className="highlight">[Your Location]</span>. With a
-              solid foundation in{" "}
-              <span className="highlight">[Your Skills]</span>, I am committed
-              to crafting <span className="highlight">efficient</span> and{" "}
-              <span className="highlight">refined solutions</span> that{" "}
-              <span className="highlight">
-                [Your Goal or Value Proposition]
-              </span>
-              .
+              Hello, I'm Aleksandr Limanovskij, a dedicated developer and
+              creative problem solver based in London. With a solid foundation
+              in programming, I am committed to crafting efficient and refined
+              solutions.
             </p>
             <p>
-              My journey into programming began{" "}
-              <span className="highlight">[Your Starting Point]</span>, and ever
-              since, I've embarked on a{" "}
-              <span className="highlight">continuous learning expedition</span>{" "}
-              to stay at the forefront of the latest{" "}
-              <span className="highlight">technologies</span> and{" "}
-              <span className="highlight">practices</span> in{" "}
-              <span className="highlight">[Your Field or Industry]</span>.
+              I am currently in my third year of my Bachelors degree at King's
+              College London and currently interested in AI/development job
+              opportunities. I am open to new software projects/startups so if
+              you believe that I am a good fit, then send me an email.
             </p>
             <p>
-              Beyond coding, you can find me{" "}
-              <span className="highlight">[Your Hobbies or Interests]</span>,
-              and I'm consistently{" "}
-              <span className="highlight">invigorated by</span> [Your Vision or
-              Future Goals]. I strongly believe in the power of{" "}
-              <span className="highlight">collaborative efforts</span> and{" "}
-              <span className="highlight">transparent communication</span> to
-              foster <span className="highlight">innovation</span> and transform{" "}
-              <span className="highlight">ideas into reality</span>.
+              I am currently in my third year of my Bachelors degree at King's
+              College London and currently interested in AI/development job
+              opportunities. I am open to new software projects/startups so if
+              you believe that I am a good fit, then send me an email. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan
+              purus a diam egestas, nec congue est sollicitudin. Donec malesuada
+              urna eu vestibulum. Nulla auctor, risus ac vulputate convallis,
+              ligula urna fringilla ipsum, et hendrerit nisl justo vel ex.
+              Vestibulum vel libero vel justo dapibus tincidunt. Fusce eu felis
+              elit. Nulla facilisi. Cras aliquet ante ut urna fringilla
+              volutpat. SuspendisseLorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Sed accumsan purus a diam egestas, nec congue est
+              sollicitudin. Donec malesuada urna eu vestibulum. Nulla auctor,
+              risus ac vulputate convallis, ligula urna fringilla ipsum, et
+              hendrerit nisl justo vel ex. Vestibulum vel libero vel justo
+              dapibus tincidunt. Fusce eu felis elit. Nulla facilisi. Cras
+              aliquet ante ut urna fringilla volutpat. SuspendisseLorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Sed accumsan purus a
+              diam egestas, nec congue est sollicitudin. Donec malesuada urna eu
+              vestibulum. Nulla auctor, risus ac vulputate convallis, ligula
+              urna fringilla ipsum, et hendrerit nisl justo vel ex. Vestibulum
+              vel libero vel justo dapibus tincidunt. Fusce eu felis elit. Nulla
+              facilisi. Cras aliquet ante ut urna fringilla volutpat.
+              SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Sed accumsan purus a diam egestas, nec congue est
+              sollicitudin. Donec malesuada urna eu vestibulum. Nulla auctor,
+              risus ac vulputate convallis, ligula urna fringilla ipsum, et
+              hendrerit nisl justo vel ex. Vestibulum vel libero vel justo
+              dapibus tincidunt. Fusce eu felis elit. Nulla facilisi. Cras
+              aliquet ante ut urna fringilla volutpat. SuspendisseLorem ipsum
+              dolor sit amet, consectetur adipiscing elit. Sed accumsan purus a
+              diam egestas, nec congue est sollicitudin. Donec malesuada urna eu
+              vestibulum. Nulla auctor, risus ac vulputate convallis, ligula
+              urna fringilla ipsum, et hendrerit nisl justo vel ex. Vestibulum
+              vel libero vel justo dapibus tincidunt. Fusce eu felis elit. Nulla
+              facilisi. Cras aliquet ante ut urna fringilla volutpat.
+              Suspendisse
             </p>
-            <a href="#contact" className="cta-button">
-              Let's Connect
+            <a href={resume} target="_blank" className="CVButton">
+              View CV
             </a>
-          </div>
-          <div className="about-image">
-            <img src="your-profile-image.jpg" alt="Aleksandr Limanovskij" />
+            <br></br>
           </div>
         </div>
       </section>
+      {/* <Document file={resume}>
+        <Page pageNumber={1} />
+      </Document> */}
 
       <div className="myProjectsHeader">
         <h1>My Projects</h1>

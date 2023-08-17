@@ -16,7 +16,7 @@
   height: max-content;
   margin: auto;
   bottom: 80%;
-  font-family: "Lumanosimo", cursive;
+  font-family: "Futura", "Helvetica Neue", Helvetica, sans-serif;
   border: "2px solid red";
 }
 .websites {
@@ -37,18 +37,18 @@
 .email {
   height: 60px;
   width: 60px;
-  filter: invert(100%);
-  -webkit-filter: invert(100%);
+  filter: grayscale(100%) invert(100%);
+  transition: filter 0.3s ease-in-out;
 }
 .github:hover,
 .linkedin:hover,
 .email:hover {
-  filter: invert(0%);
+  filter: none;
 }
 
 .downArrow {
-  height: 60px;
   width: 60px;
+  height: 60px;
   filter: invert(100%);
   -webkit-filter: invert(100%);
   text-align: center;
@@ -56,15 +56,21 @@
   bottom: 10px;
   left: 0;
   right: 0;
-  height: max-content;
   margin: auto;
   display: flex;
-  justify-content: space-between;
-}
-.downArrow:hover {
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.3s ease-in-out, transform 0.2s ease-in-out;
   cursor: pointer;
-  filter: invert(0%);
-  -webkit-filter: invert(50%);
+}
+
+.downArrow:hover {
+  filter: invert(70%);
+  transform: translateY(-5px);
+}
+
+.downArrow:focus {
+  outline: none;
 }
 .myProjects {
   text-align: center;
@@ -232,7 +238,7 @@
   background: #fff;
   border-radius: 4px;
   padding: 20px;
-  border: 1px solid #999;
+  border: 1px solid #fffcfc;
   overflow: auto;
 }
 
@@ -331,4 +337,27 @@
 
 .cta-button:hover {
   background-color: #0056b3;
+}
+.CVButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.CVButton:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+  color: #000000;
+}
+
+.CVButton:focus {
+  outline: none;
 }
