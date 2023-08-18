@@ -12,26 +12,28 @@ interface PopUpProp {
 function Popup(props: PopUpProp) {
   return (
     <div className="popup-box">
-      <div className="boxas">
+      <div className="box">
         <span className="close-icon" onClick={props.handleClose}>
           x
         </span>
-        {props.content}
+        <div>
+          <text>{props.content}</text>
+          <text className="centre">{props.time}</text>
+        </div>
+        <div className="centre">
+          <video
+            style={{ border: "2px solid black" }}
+            src={props.video}
+            width="800"
+            height="400"
+            controls
+          />
+        </div>
 
-        <text>{props.time}</text>
-
-        <video
-          src={props.video}
-          style={{ margin: 20 }}
-          width="800"
-          height="400"
-          controls
-        />
         <div
+          className="centre"
           style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           {props.dependencies.map((dependency) => (

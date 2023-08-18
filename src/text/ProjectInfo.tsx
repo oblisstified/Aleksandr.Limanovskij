@@ -2,6 +2,10 @@ import mealTimeVideo from "../assets/MealtimeVideo.mp4";
 import minesweeperVideo from "../assets/MineSweeperVideo.mp4";
 import chessVideo from "../assets/ChessVideo.mp4";
 import NNAdditionVideo from "../assets/NNVideo.mp4";
+import chessPoster from "../assets/ChessPoster.png";
+import foodPoster from "../assets/mealTimePoster.png";
+import minesweeperPoster from "../assets/minesweeperPoster.jpg";
+import neuralPoster from "../assets/NeuralNetwork.png";
 
 export interface Project {
   id: string;
@@ -11,6 +15,7 @@ export interface Project {
   colorClass: string;
   dependencies: string[];
   time: string;
+  image: string;
 }
 
 const projects: Project[] = [
@@ -23,6 +28,7 @@ const projects: Project[] = [
     colorClass: "box-purple",
     dependencies: ["React Native", "Javascript", "FireBase"],
     time: " March 2023",
+    image: foodPoster,
   },
   {
     id: "2",
@@ -32,6 +38,7 @@ const projects: Project[] = [
     colorClass: "box-red",
     dependencies: ["PyGame", " Python"],
     time: " June 2021",
+    image: chessPoster,
   },
   {
     id: "3",
@@ -41,6 +48,7 @@ const projects: Project[] = [
     colorClass: "box-blue",
     dependencies: ["PyGame", " Python"],
     time: " August 2021",
+    image: minesweeperPoster,
   },
   {
     id: "4",
@@ -50,24 +58,7 @@ const projects: Project[] = [
     colorClass: "box-green",
     dependencies: ["Python"],
     time: " May 2023",
-  },
-  {
-    id: "5",
-    title: "Reserved...",
-    description: "This is reserved...",
-    video: "",
-    colorClass: "box-pink",
-    dependencies: [""],
-    time: "",
-  },
-  {
-    id: "6",
-    title: "Reserved...",
-    description: "This is reserved...",
-    video: "",
-    colorClass: "box-orange",
-    dependencies: [""],
-    time: "",
+    image: neuralPoster,
   },
 ];
 
