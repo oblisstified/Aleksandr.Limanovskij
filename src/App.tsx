@@ -9,7 +9,7 @@ import github from "./assets/github.png";
 import email from "./assets/email.png";
 import downArrow from "./assets/downArrow.png";
 
-import resume from "./assets/resume.pdf";
+import resume from "./assets/Aleksandr_Limanovskij_CV.pdf";
 import projects, { Project } from "./text/ProjectInfo";
 import "./App.css";
 import Popup from "./components/popUp";
