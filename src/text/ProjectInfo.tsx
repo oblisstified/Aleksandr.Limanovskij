@@ -12,7 +12,6 @@ export interface Project {
   title: string;
   description: string;
   video: string;
-  colorClass: string;
   dependencies: string[];
   time: string;
   image: string;
@@ -25,7 +24,6 @@ const projects: Project[] = [
     description:
       "Android and IOS app designed to set and track dietary goals, log meals and gain insight through analytics. Additional features: gamified system with achievements, posting in communities, friend connectivity.",
     video: mealTimeVideo,
-    colorClass: "box-purple",
     dependencies: ["React Native", "Javascript", "FireBase"],
     time: " March 2023",
     image: foodPoster,
@@ -33,9 +31,9 @@ const projects: Project[] = [
   {
     id: "2",
     title: "Chess AI",
-    description: "This is the description for Chess AI.",
+    description:
+      "Chess game created with PyGame library. You play against an AI that uses the MiniMax algorithm to compute its best move.",
     video: chessVideo,
-    colorClass: "box-red",
     dependencies: ["PyGame", " Python"],
     time: " June 2021",
     image: chessPoster,
@@ -43,9 +41,8 @@ const projects: Project[] = [
   {
     id: "3",
     title: "Mines",
-    description: "This is the description for Mines.",
+    description: "MineSweeper created with Pygame library.",
     video: minesweeperVideo,
-    colorClass: "box-blue",
     dependencies: ["PyGame", " Python"],
     time: " August 2021",
     image: minesweeperPoster,
@@ -53,9 +50,9 @@ const projects: Project[] = [
   {
     id: "4",
     title: "Add",
-    description: "This is the description for Add.",
+    description:
+      "A neural network created from scratch which was trained to give any amount of numbers and it would be able to add them together with mean errors less than 1%. It uses back propagation and varaible amount of nodes in the hidden layers which you can test for the most optimnal configuration.",
     video: NNAdditionVideo,
-    colorClass: "box-green",
     dependencies: ["Python"],
     time: " May 2023",
     image: neuralPoster,

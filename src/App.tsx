@@ -132,50 +132,13 @@ function App() {
               solutions.
             </p>
             <p>
-              I am currently in my third year of my Bachelors degree at King's
-              College London and currently interested in AI/development job
-              opportunities. I am open to new software projects/startups so if
-              you believe that I am a good fit, then send me an email.
+              I am currently in my third year of my Masters degree at King's
+              College London averaging a First Class Honors and interested in
+              AI/development job opportunities. I am open to new software
+              projects/startups so if you believe that I am a good fit, then
+              send me an email.
             </p>
-            <p>
-              I am currently in my third year of my Bachelors degree at King's
-              College London and currently interested in AI/development job
-              opportunities. I am open to new software projects/startups so if
-              you believe that I am a good fit, then send me an email. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan
-              purus a diam egestas, nec congue est sollicitudin. Donec malesuada
-              urna eu vestibulum. Nulla auctor, risus ac vulputate convallis,
-              ligula urna fringilla ipsum, et hendrerit nisl justo vel ex.
-              Vestibulum vel libero vel justo dapibus tincidunt. Fusce eu felis
-              elit. Nulla facilisi. Cras aliquet ante ut urna fringilla
-              volutpat. SuspendisseLorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Sed accumsan purus a diam egestas, nec congue est
-              sollicitudin. Donec malesuada urna eu vestibulum. Nulla auctor,
-              risus ac vulputate convallis, ligula urna fringilla ipsum, et
-              hendrerit nisl justo vel ex. Vestibulum vel libero vel justo
-              dapibus tincidunt. Fusce eu felis elit. Nulla facilisi. Cras
-              aliquet ante ut urna fringilla volutpat. SuspendisseLorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Sed accumsan purus a
-              diam egestas, nec congue est sollicitudin. Donec malesuada urna eu
-              vestibulum. Nulla auctor, risus ac vulputate convallis, ligula
-              urna fringilla ipsum, et hendrerit nisl justo vel ex. Vestibulum
-              vel libero vel justo dapibus tincidunt. Fusce eu felis elit. Nulla
-              facilisi. Cras aliquet ante ut urna fringilla volutpat.
-              SuspendisseLorem ipsum dolor sit amet, consectetur adipiscing
-              elit. Sed accumsan purus a diam egestas, nec congue est
-              sollicitudin. Donec malesuada urna eu vestibulum. Nulla auctor,
-              risus ac vulputate convallis, ligula urna fringilla ipsum, et
-              hendrerit nisl justo vel ex. Vestibulum vel libero vel justo
-              dapibus tincidunt. Fusce eu felis elit. Nulla facilisi. Cras
-              aliquet ante ut urna fringilla volutpat. SuspendisseLorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Sed accumsan purus a
-              diam egestas, nec congue est sollicitudin. Donec malesuada urna eu
-              vestibulum. Nulla auctor, risus ac vulputate convallis, ligula
-              urna fringilla ipsum, et hendrerit nisl justo vel ex. Vestibulum
-              vel libero vel justo dapibus tincidunt. Fusce eu felis elit. Nulla
-              facilisi. Cras aliquet ante ut urna fringilla volutpat.
-              Suspendisse
-            </p>
+            <p></p>
             <a href={resume} target="_blank" className="CVButton">
               View CV
             </a>

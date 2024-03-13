@@ -2,8 +2,11 @@
   "name": "personal_website",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://oblisstified.github.io/oblisstified.githuib.io",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -20,6 +23,7 @@
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^3.1.0",
+    "gh-pages": "^6.1.1",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
   }

@@ -303,13 +303,13 @@
   background-color: transparent;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease-in-out;
 }
 
 .project-button:hover {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #fdd10e;
+  color: #000000;
 }
