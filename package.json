@@ -2,7 +2,7 @@
   "name": "personal_website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://oblisstified.github.io/oblisstified.githuib.io",
+  "homepage": "https://oblisstified.github.io/Aleksandr.Limanovskij",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
